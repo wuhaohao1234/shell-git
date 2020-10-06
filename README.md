@@ -8,7 +8,7 @@
 
 安装child_process,commander
 
-`yarn add child_press commander`
+`yarn add commander`
 
 编辑package.json
 
@@ -66,4 +66,31 @@ npm publish
 xxx-cli -v
 
 xxx-cli init xxx
+```
+
+## 使用shelljs
+
+`yarn add shellljs`
+
+index.js修改为
+
+```javascript
+#!/usr/bin/env node
+const program = require("commander");
+const exec = require("shelljs").exec;
+program
+  .version(require("./package").version, "-v, --version")
+  .command("add <msg>")
+  .action((msg) => {
+    exec("git add .");
+    exec(`git commit -m ${msg}`);
+    exec(`git push`);
+  });
+//  .command('init <name>')
+//  .action((name) => {
+//    console.log(name)
+//  })
+
+program.parse(process.argv);
+
 ```
