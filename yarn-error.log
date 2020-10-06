@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\abu0418\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init v1.22.5 success Saved package.json Done in 0.24s.
+  C:\Program Files\nodejs\node.exe C:\Users\abu0418\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add v1.22.5 [1/4] Resolving packages...
 
 PATH: 
   C:\Program Files (x86)\Git\mingw32\bin;C:\Program Files (x86)\Git\usr\bin;C:\Users\abu0418\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs;C:\Program Files (x86)\Git\usr\bin;C:\ProgramData\chocolatey\bin;D:\download\PanDownload_v2.1.3\jdk-13.0.2_windows-x64_bin\jdk-13.0.2\bin;C:\Users\abu0418\scoop\shims;C:\Users\abu0418\.cargo\bin;C:\Users\abu0418\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\abu0418\AppData\Local\Programs\Python\Python38-32;C:\Users\abu0418\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip;D:\download\Microsoft VS Code\bin;C:\Users\abu0418\AppData\Roaming\npm;D:\download\pconline1547249313178;D:\download;D:\download\PanDownload_v2.1.3\php-7.3.14-nts-Win32-VC15-x64;C:\Users\abu0418\AppData\Roaming\Composer\vendor\bin;C:\Users\abu0418\go\bin;D:\my-download\flutter_windows_v1.12.13+hotfix.9-stable\flutter\bin;C:\Users\abu0418\.deno\bin;D:\my-download\micro-2.0.4-win64\micro-2.0.4;D:\my-download\hugo_extended_0.72.0_Windows-64bit;C:\Users\abu0418\Downloads\Compressed\apache-maven-3.6.3\bin;D:\download\pconline1547249313178\Cmder.exe;C:\Users\abu0418\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Program Files\MongoDB\Server\4.4\bin;C:\Users\abu0418\AppData\Local\Android\Sdk\platform-tools;C:\Users\abu0418\AppData\Local\Android\Sdk\emulator;C:\Users\abu0418\AppData\Local\Android\Sdk\tools;C:\Users\abu0418\AppData\Local\Android\Sdk\tools\bin;D:\download\PanDownload_v2.1.3\mysql-8.0.19-winx64\mysql-8.0.19-winx64\bin
@@ -14,22 +14,22 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: canceled
-      at Interface.<anonymous> (C:\Users\abu0418\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:136216:13)
-      at Interface.emit (events.js:223:5)
-      at Interface._ttyWrite (readline.js:885:16)
-      at ReadStream.onkeypress (readline.js:191:10)
-      at ReadStream.emit (events.js:223:5)
-      at emitKeys (internal/readline/utils.js:433:14)
-      at emitKeys.next (<anonymous>)
-      at ReadStream.onData (readline.js:1151:36)
-      at ReadStream.emit (events.js:223:5)
-      at addChunk (_stream_readable.js:309:12)
+  Error: https://registry.npmjs.org/v1.22.5: Not found
+      at Request.params.callback [as _callback] (C:\Users\abu0418\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
+      at Request.self.callback (C:\Users\abu0418\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
+      at Request.emit (events.js:223:5)
+      at Request.<anonymous> (C:\Users\abu0418\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
+      at Request.emit (events.js:223:5)
+      at IncomingMessage.<anonymous> (C:\Users\abu0418\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
+      at Object.onceWrapper (events.js:312:28)
+      at IncomingMessage.emit (events.js:228:7)
+      at endReadableNT (_stream_readable.js:1185:12)
+      at processTicksAndRejections (internal/process/task_queues.js:81:21)
 
 npm manifest: 
   {
     "name": "shell-git",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "main": "index.js",
     "bin": {
       "git-cli": "./index.js"
