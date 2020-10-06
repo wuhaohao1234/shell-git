@@ -1,5 +1,6 @@
 # shell-git
-
+git地址
+https://github.com/wuhaohao1234/shell-git
 ## 学会npm搭建自己的脚手架
 
 `mkdir shell-git`
@@ -75,5 +76,56 @@ xxx-cli init xxx
 index.js修改为
 
 ```javascript
+#!/usr/bin/env node
+const program = require("commander");
+const exec = require("shelljs").exec;
+program
+  .version(require("./package").version, "-v, --version")
+  .command("submit <msg>")
+  .action((msg) => {
+    exec("git add .");
+    console.log('添加文件到缓存区')
+    exec(`git commit -m ${msg}`);
+    console.log(`添加commit 为 ${msg}`)
+    exec(`git push`) 
+  });
+//  .command('init <name>')
+//  .action((name) => {
+//    console.log(name)
+//  })
+
+program.parse(process.argv);
 
 ```
+package.json改为
+```json
+{
+  "name": "shell-git",
+  "version": "1.0.1",
+  "main": "index.js",
+  "bin": {
+    "git-cli": "./index.js"
+  },
+  "repository": "git@github.com:wuhaohao1234/shell-git.git",
+  "author": "wuhaohao1234 <1611499758@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^6.1.0",
+    "shelljs": "^0.8.4"
+  }
+}
+
+```
+这里记得每次修改升级npm version
+
+然后卸载全局，重新发布，再重新安装
+
+最后执行
+
+`git-cli submit 修改文档`
+
+## 后续
+
+1. 后续可加入版本切换
+2. 合并分支等功能
+3. commit 规范
