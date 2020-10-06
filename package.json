@@ -1,0 +1,15 @@
+{
+  "name": "shell-git",
+  "version": "1.0.4",
+  "main": "index.js",
+  "bin": {
+    "git-cli": "./index.js"
+  },
+  "repository": "git@github.com:wuhaohao1234/shell-git.git",
+  "author": "wuhaohao1234 <1611499758@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^6.1.0",
+    "shelljs": "^0.8.4"
+  }
+}
