@@ -9,7 +9,7 @@ program
     console.log('添加文件到缓存区')
     exec(`git commit -m ${msg}`);
     console.log(`添加commit 为 ${msg}`)
-    exec(`git push ${branch}`);
+    exec(`git push origin ${branch}`);
     console.log(`提交分支为 ${branch}`)
   });
 //  .command('init <name>')
